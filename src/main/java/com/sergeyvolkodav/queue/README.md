@@ -4,7 +4,7 @@
 
 * Tread safe 
 * Fixed size
-* generic
+* Generics
  
 
 ## Notes 

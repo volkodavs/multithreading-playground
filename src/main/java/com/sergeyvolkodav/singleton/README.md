@@ -9,10 +9,10 @@
 
 ## Notes 
 
-* Block synchronization
-* Volatile keyword for happens-before semantics 
+* [Block synchronization](http://www.java67.com/2013/01/difference-between-synchronized-block-vs-method-java-example.html)
+* Volatile keyword for [happens-before](https://en.wikipedia.org/wiki/Java_memory_model) semantics
 * Lazy initialization
-* Double-Checked Locking
+* [Double-Checked Locking](https://en.wikipedia.org/wiki/Double-checked_locking)
 
 ## Code snippet 
 
