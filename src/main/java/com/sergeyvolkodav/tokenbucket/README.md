@@ -14,6 +14,8 @@ The class should expose an API called getToken that various threads can call to 
 
 * 1 request per second is a slowest
 * Synchronized keyword on a method
+* wait() always must be called inside a loop [read more](https://stackoverflow.com/questions/1038007/why-should-wait-always-be-called-inside-a-loop)
+
 
 ## Code snippet 
 
