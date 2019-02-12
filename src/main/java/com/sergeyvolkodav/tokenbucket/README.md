@@ -1,4 +1,4 @@
-# Singleton
+# Rate Limit
 
 ## Requirement 
 
