@@ -9,7 +9,7 @@ Design and implement a thread-safe class that allows registeration of callback m
 * Used java [condition interface](https://stackoverflow.com/questions/10395571/condition-vs-wait-notify-mechanism) 
 * wait() always must be called inside a loop [read more](https://stackoverflow.com/questions/1038007/why-should-wait-always-be-called-inside-a-loop)
 
-## Code snippet 
+## Code 
 
 ```java
 

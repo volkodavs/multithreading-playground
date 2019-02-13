@@ -10,7 +10,7 @@ Design a lock which lets multiple readers read at the same time, but only one wr
 * wait() always must be called inside a loop [read more](https://stackoverflow.com/questions/1038007/why-should-wait-always-be-called-inside-a-loop)
  
 
-## Code snippet 
+## Code 
 
 ```java
 

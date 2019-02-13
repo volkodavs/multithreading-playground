@@ -14,7 +14,7 @@
 * Lazy initialization
 * [Double-Checked Locking](https://en.wikipedia.org/wiki/Double-checked_locking)
 
-## Code snippet 
+## Code 
 
 ```java
     public static Singleton getInstance() {
