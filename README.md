@@ -10,3 +10,4 @@
 * [Semaphore](src/main/java/com/sergeyvolkodav/semaphore/README.md)
 * [Read-write Lock](src/main/java/com/sergeyvolkodav/readwritelock/README.md)
 * [Unisex Bathroom Problem](src/main/java/com/sergeyvolkodav/unisexbathroom/README.md)
+* [Barrier](src/main/java/com/sergeyvolkodav/barrier/README.md)
