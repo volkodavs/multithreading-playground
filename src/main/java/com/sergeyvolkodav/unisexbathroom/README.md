@@ -15,24 +15,24 @@ A bathroom is being designed for the use of both males and females in an office 
 
 ```java
 
-public void maleUseBathroom(String name) throws InterruptedException {
+  public void maleUseBathroom(String name) throws InterruptedException {
 
         synchronized (this) {
-            while (isUsedBy == UsedBy.FEMELE) {
+            while (isGender == Gender.FEMALE) {
                 wait();
             }
             maxEmps.acquire();
-            isUsedBy = UsedBy.MEN;
+            isGender = Gender.MEN;
             emps++;
         }
 
-        useBathroom(UsedBy.MEN);
+        useBathroom(Gender.MEN);
         maxEmps.release();
 
         synchronized (this) {
             emps--;
             if (emps == 0) {
-                isUsedBy = UsedBy.NONE;
+                isGender = Gender.NONE;
             }
             notifyAll();
         }
@@ -42,21 +42,21 @@ public void maleUseBathroom(String name) throws InterruptedException {
 
         synchronized (this) {
 
-            while (isUsedBy == UsedBy.MEN) {
+            while (isGender == Gender.MEN) {
                 wait();
             }
             maxEmps.acquire();
-            isUsedBy = UsedBy.FEMELE;
+            isGender = Gender.FEMALE;
             emps++;
         }
 
-        useBathroom(UsedBy.FEMELE);
+        useBathroom(Gender.FEMALE);
         maxEmps.release();
 
         synchronized (this) {
             emps--;
             if (emps == 0) {
-                isUsedBy = UsedBy.NONE;
+                isGender = Gender.NONE;
             }
             notifyAll();
         }

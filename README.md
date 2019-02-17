@@ -11,3 +11,4 @@
 * [Read-write Lock](src/main/java/com/sergeyvolkodav/readwritelock/README.md)
 * [Unisex Bathroom Problem](src/main/java/com/sergeyvolkodav/unisexbathroom/README.md)
 * [Barrier](src/main/java/com/sergeyvolkodav/barrier/README.md)
+* [Uber Ride Problem](src/main/java/com/sergeyvolkodav/uberride/README.md)

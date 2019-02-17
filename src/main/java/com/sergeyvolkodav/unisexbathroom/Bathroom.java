@@ -4,28 +4,28 @@ import java.util.concurrent.Semaphore;
 
 public class Bathroom {
 
-    private UsedBy isUsedBy = UsedBy.NONE;
+    private Gender isGender = Gender.NONE;
     private int emps = 0;
     Semaphore maxEmps = new Semaphore(3);
 
     public void maleUseBathroom(String name) throws InterruptedException {
 
         synchronized (this) {
-            while (isUsedBy == UsedBy.FEMELE) {
+            while (isGender == Gender.FEMALE) {
                 wait();
             }
             maxEmps.acquire();
-            isUsedBy = UsedBy.MEN;
+            isGender = Gender.MEN;
             emps++;
         }
 
-        useBathroom(UsedBy.MEN);
+        useBathroom(Gender.MEN);
         maxEmps.release();
 
         synchronized (this) {
             emps--;
             if (emps == 0) {
-                isUsedBy = UsedBy.NONE;
+                isGender = Gender.NONE;
             }
             notifyAll();
         }
@@ -35,28 +35,28 @@ public class Bathroom {
 
         synchronized (this) {
 
-            while (isUsedBy == UsedBy.MEN) {
+            while (isGender == Gender.MEN) {
                 wait();
             }
             maxEmps.acquire();
-            isUsedBy = UsedBy.FEMELE;
+            isGender = Gender.FEMALE;
             emps++;
         }
 
-        useBathroom(UsedBy.FEMELE);
+        useBathroom(Gender.FEMALE);
         maxEmps.release();
 
         synchronized (this) {
             emps--;
             if (emps == 0) {
-                isUsedBy = UsedBy.NONE;
+                isGender = Gender.NONE;
             }
             notifyAll();
         }
     }
 
-    private void useBathroom(UsedBy usedBy) throws InterruptedException {
-        System.out.println(usedBy.name() + " using bathroom. Current employees in bathroom = " + emps);
+    private void useBathroom(Gender gender) throws InterruptedException {
+        System.out.println(gender.name() + " using bathroom. Current employees in bathroom = " + emps);
         Thread.sleep(3500);
         System.out.println("Done with bathroom");
     }

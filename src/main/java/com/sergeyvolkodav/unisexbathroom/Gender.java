@@ -1,5 +1,5 @@
 package com.sergeyvolkodav.unisexbathroom;
 
-public enum UsedBy {
-    MEN, FEMELE, NONE
+public enum Gender {
+    MEN, FEMALE, NONE
 }
